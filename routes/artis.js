@@ -10,4 +10,6 @@ router.get('/login', ArtistController.loginPage)
 router.get('/home', PostController.homePageArtist)
 // router.post('/home', PostController.newPost)
 
+router.get('/post/delete/:id', )
+
 module.exports = router

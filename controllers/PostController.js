@@ -3,10 +3,12 @@ const { Artist, Post, Image } = require('../models')
 
 class PostController {
     static homePageArtist(req, res) {
-        Post.findAll()
-            // include: [Artist]
+        Post.findAll({
+            include: [Artist, Image]
+        })
         .then(data => {
-            res.send(data)
+            // res.send(data)
+            res.render('artist', {data})
         })
         .catch(err => res.send(err))
     }
@@ -52,6 +54,16 @@ class PostController {
     // static newPostForm(req, res) {
     //     res.render('upload')
     // }
+
+    static deletePost(req, res) {
+        Post.destroy({
+            where: {id: +req.params.id}
+        })
+        .then(_=> {
+            res.redirect('/artist/home')
+        })
+        .catch(err => res.send(err))
+    }
 }
 
 module.exports = PostController
