@@ -1,5 +1,5 @@
 class FanController {
-    static register(req, res) {
+    static registerForm(req, res) {
         res.send('ini halaman regis fans')
     }
 }

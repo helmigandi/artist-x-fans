@@ -5,6 +5,8 @@ const Controller = require('../controllers/Controller')
 
 router.get('/', Controller.indexPage)
 
+
+
 router.use('/artist', artist)
 router.use('/fans', fans)
 
