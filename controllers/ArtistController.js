@@ -15,7 +15,7 @@ class ArtistController {
             gender: req.body.gender,
             birth_date: req.body.birth_date
         }
-        console.log(obj);
+        // console.log(obj);
         Artist.create(obj)
         .then(_=> {
             res.redirect('/artist/register')
