@@ -5,6 +5,11 @@ function encryptPass(password) {
     return bcrypt.hashSync(password, salt)
 }
 
-console.log(encryptPass('padang'));
+function decrypt(password, hash) {
+    return bcrypt.compareSync(password, hash)
+}
 
-module.exports = encryptPass
+module.exports = {
+    encryptPass,
+    decrypt
+}
