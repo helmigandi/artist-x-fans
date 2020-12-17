@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Artist.belongsToMany(models.Fan, {through: models.Follow})
-      Artist.hasMany(models.Post)
+      Artist.hasMany(models.Post, {foreignKey: 'ArtistId'})
     }
   };
   Artist.init({
