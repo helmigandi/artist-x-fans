@@ -2,7 +2,8 @@ const { Artist } = require('../models')
 
 class ArtistController {
     static registerForm(req, res) {
-        res.send('ini halaman regis artis')
+        // res.send('ini halaman regis artis')
+        res.render("registerArtist")
     }
 
     static register(req, res) {
