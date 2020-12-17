@@ -7,6 +7,7 @@ router.post('/register', ArtistController.register)
 
 router.get('/login', ArtistController.loginPage)
 
-router.get('/:id/post', PostController.newPost)
+router.get('/:id/post', PostController.newPostForm)
+router.post('/:id/post', PostController.newPost)
 
 module.exports = router
