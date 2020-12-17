@@ -7,7 +7,7 @@ router.post('/register', ArtistController.register)
 
 router.get('/login', ArtistController.loginPage)
 
-router.get('/home', PostController.homePage)
-router.post('/home', PostController.newPost)
+router.get('/home', PostController.homePageArtist)
+// router.post('/home', PostController.newPost)
 
 module.exports = router
