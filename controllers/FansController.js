@@ -24,6 +24,10 @@ class FanController {
                 res.send(err)
             })
     }
+
+    static loginPage(req, res) {
+        res.render('loginFan')
+    }
 }
 
 module.exports = FanController
