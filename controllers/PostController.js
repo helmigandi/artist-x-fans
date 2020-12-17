@@ -8,7 +8,7 @@ class PostController {
         })
         .then(data => {
             // res.send(data)
-            // console.log(data);
+            console.log(data);
             res.render('artist', {data})
         })
         .catch(err => res.send(err))

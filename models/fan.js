@@ -1,4 +1,6 @@
 'use strict';
+const {encryptPass} = require('../helpers/passHash')
+
 const {
   Model
 } = require('sequelize');
@@ -11,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Fan.belongsToMany(models.Artist, {through: models.Follow})
+      Fan.belongsToMany(models.Artist, { through: models.Follow })
     }
   };
   Fan.init({
@@ -25,6 +27,11 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Fan',
+    hooks: {
+      beforeCreate: (instance, options) => {
+        instance.password = encryptPass(instance.password)
+      }
+    }
   });
   return Fan;
 };
