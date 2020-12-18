@@ -1,0 +1,90 @@
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 1fr 1fr 50px;
+  gap: 10px;
+
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container div{
+  padding: 10px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+}
+
+.header {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+}
+
+.content-large-1{
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  overflow: auto;
+}
+
+.content-small{
+  grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  overflow: auto;
+}
+
+.footer {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+}
+
+.child{
+  width: 90px;
+  height: 80px;
+  background: cyan;
+
+}
+
+.content-large-2 table {
+  margin: auto;
+}
+
+.content-large-2 td {
+  text-align:justify;
+}
+
+.content-large-2 th {
+  text-align:left;
+}
+
+.content-large-2 .edit-delete {
+  text-align:right;
+}
+
+textarea {
+  resize: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;  
+}
+
+label{
+  font-weight: bold;
+}
+.button-large {
+  font-size: 100%;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <H1>Artist X Fans</H1>
+    </div>
+    <div class="content-large-1">
+
+      <form action="" method="post">
+        <div style="border: none;">
+          <label for="story">Tell us your story:</label>
+        </div>
+        <textarea id="story" name="story" rows="5" cols="64"></textarea>
+        <input type="button" value="Upload Image" class="button-large">
+        <input type="submit" value="Post It" class="button-large">
+      </form>
+
+    </div>
+    <div class="content-small">
+      <p>Your Name: </p>
+      <p>Your Followers: </p>
+      <input type="button" value="Logout" class="button-large">
+    </div>
+    <div class="content-large-2">
+      <table border="1">
+        <!-- start looping -->
+        <% data.forEach(post => { %>
+          <thead>
+            <tr>
+              <th><%= post.Artist.name %></th>
+              <th class="edit-delete"><a href="">edit</a> || <a href="/artist/post/delete/<%= post.id %>">delete</a></th>
+            </tr>
+          </thead>
+          
+          <tbody>
+            <tr>
+              <td colspan="2"><%= post.message %>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">gambar</td>
+            </tr>
+          </tbody>
+          <% }) %>
+          <!-- end looping -->
+      </table>
+    </div>
+    <div class="footer">
+      &copy; 2020 Artist X Fans
+    </div>
+  </div>
+</body>
+
+</html>

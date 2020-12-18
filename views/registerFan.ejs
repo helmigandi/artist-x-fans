@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+  <title>Register as Fans</title>
+  <link rel="stylesheet" href="/stylesheets/form.css" type="text/css">
+</head>
+
+<body>
+
+  <div>
+    <h1>Register as Fans</h1>
+  </div>
+
+  <form action="/fans/register" method="POST">
+    <label for="first_name">First Name</label>
+    <input id="first_name" type="text" name="first_name">
+
+    <label for="last_name">Last Name</label>
+    <input id="last_name" type="text" name="last_name">
+
+    <label for="username">Username</label>
+    <input id="username" type="text" name="username">
+
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
+
+    <div>
+      <label for="gender">Gender</label> <br>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+    </div>
+
+    <label for="birth_date">Birth Date</label>
+    <input type="date" name="birth_date" id="birth_date">    
+
+    <input type="submit" value="Register">
+  </form>
+
+
+</body>
+
+</html>
